@@ -30,10 +30,10 @@ SECRET_KEY = 'django-insecure-9u^rm!@36wbh9k6=8psp&p1)bjs=nz$i3$34n=f=!c5ik5n2i4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-CELERY_BROKER_URL = "redis://localhost:6379"
-CELERY_RESULT_BACKEND = "redis://localhost:6379"
+CELERY_BROKER_URL = "redis://172.31.17.68:6379"
+CELERY_RESULT_BACKEND = "redis://172.31.17.68:6379"
 # Application definition
 
 INSTALLED_APPS = [
@@ -65,7 +65,7 @@ CELERY_SETTINGS = {
 
 # CSRF_COOKIE_DOMAIN = None
 # CSRF_COOKIE_SECURE = None
-CSRF_TRUSTED_ORIGINS = ["http://localhost:8000"]
+CSRF_TRUSTED_ORIGINS = ["http://0.0.0.0:8000"]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -104,13 +104,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         # 'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': 'nfl_demo_1',
+        'NAME': 'postgres',
 
-        'USER': 'mohan_007',
+        'USER': 'postgres',
 
-        'PASSWORD': '',
+        'PASSWORD': 'Ys4w37aM0QtSt',
 
-        'HOST': 'localhost',
+        'HOST': 'sharperspoint-dev.c14iski2iawj.us-west-2.rds.amazonaws.com',
 
         # 'PORT': '<db_port>',
     }

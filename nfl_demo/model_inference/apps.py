@@ -398,5 +398,5 @@ class ModelInferenceConfig(AppConfig):
     # label = "model_inference"
     var = None
     def ready(self):
-        # pass
+        #pass
         ModelInferenceConfig.var = main_1()
